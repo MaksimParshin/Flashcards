@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+body {
+    background-image: url("world.png");
+    background-size: cover;
+}
+
+.main_container {
+    width: 650px;
+    height: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.card {
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'Mouse Memoirs', sans-serif;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.front {
+    background: linear-gradient(#08aeea, #2af598);
+    z-index: 2;
+}
+
+.back {
+    background: linear-gradient(#f8da61, #ff5acd);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.flex-item,
+.card,
+.front,
+.back {
+    width: 180px;
+    height: 180px;
+}
